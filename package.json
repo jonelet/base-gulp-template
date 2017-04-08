@@ -1,0 +1,39 @@
+{
+  "name": "base-template",
+  "version": "1.0.0",
+  "description": "no description",
+  "main": "index.js",
+  "dependencies": {
+    "countdown": "^2.6.0",
+    "generator-learnfe": "^0.3.0",
+    "normalize.css": "^6.0.0",
+    "superagent": "^3.5.2",
+    "yo": "^1.8.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "eslint": "^3.18.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-mocha": "^4.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-wrap": "^0.13.0",
+    "jshint": "^2.9.4",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
