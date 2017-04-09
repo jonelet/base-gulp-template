@@ -4,7 +4,6 @@ var minifyCss = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var imageMin = require('gulp-imagemin');
-var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
 var sass = require('gulp-sass');
@@ -14,6 +13,12 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var jshint = require('gulp-jshint');
 var mocha = require('gulp-mocha');
+
+var handlebars = require('gulp-handlebars');
+var wrap = require('gulp-wrap');
+var declare = require('gulp-declare');
+var concat = require('gulp-concat');
+var handleCompile = require('gulp-compile-handlebars');
 
 // folders
 var folder = {
@@ -30,7 +35,7 @@ gulp.task('templates', function () {
     };
 
     return gulp.src([folder.src+'templates/**/*.hbs', '!'+folder.src+'templates/partials/**/*.hbs'])
-        .pipe(handlebars(data, options))
+        .pipe(handleCompile(data, options))
         .pipe(rename(function (path) {
             path.extname = '.html';
         }))
